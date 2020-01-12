@@ -1,11 +1,11 @@
 import os
 import midi_decoder
-from bottle import template, request, route, run
+from bottle import template, request, route, run, static_file
 
 @route('/')
 def index():
 
-	return template("index.html")
+	return static_file("index.html",root=".")
 
 @route('/decoded', method = 'POST')
 def get_midi_decoding_inputs():
@@ -19,7 +19,7 @@ def get_midi_decoding_inputs():
 
 	if os.path.exists(file_path):
 		os.remove(file_path)
-		
+
 	midi_file_upload.save(file_path) 
 
 	output_text = midi_decoder.decode_midi(file_path, int(track_number_str))
