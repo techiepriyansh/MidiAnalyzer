@@ -1,6 +1,9 @@
 <html>
 	<head>
 		<title>Midi Decoder</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<h1>
@@ -8,9 +11,9 @@
 		</h1>
 		<form action="/decoded" method="post" enctype="multipart/form-data">
 
-  			<div>Track Number:      <input type="text" name="track_number" /></div>
-  			<div>Select a Midi File: <input type="file" name="upload" /><div>
-  			<div>			       <input type="submit" value="Decode!" /></div>
+  			<div  class="form-group"><label class="bmd-label-floating">Track Number:</label>      <input type="text" name="track_number" class="form-control"  /></div>
+  			<div class="form-group"><label class="bmd-label-floating">Select a Midi File:</label> <input type="file" name="upload" class="form-control"  /><div><br><br><br>
+  			<div class="form-group">			    <input type="submit" value="Decode!" class="form-control"  /></div>
 		</form>
 	</body>
 </html>
